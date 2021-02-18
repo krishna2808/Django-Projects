@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Details</title>
+
+
+
+      <style>
+    Body {
+      font-family: Calibri, Helvetica, sans-serif;
+      background-color: pink;
+    }
+    button {
+           background-color: black;
+           width: 5%;
+            color: orange;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+             }
+     form {
+            border: 3px solid #f1f1f1;
+        }
+     input[type=text]{
+            width:5%;
+            margin: 8px 0;
+            padding: 8px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+     .semester{
+          width:15%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+
+     }
+     {#button:hover {#}
+     {#       opacity: 0.2;#}
+     {#   }#}
+     {# .cancelbtn {#}
+     {#       width: auto;#}
+     {#       padding: 10px 18px;#}
+     {#       margin: 10px 5px;#}
+     {#   }#}
+    .hello{
+            background-color: burlywood;
+        }
+
+     .container {
+            padding: 15px;
+            background-color: lightblue;
+        }
+     .details {
+            padding: 10px;
+            background-color: lightgreen;
+        }
+
+</style>
+
+
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+<body class="hello">
+
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{%url 'home'%}">Home</a>
+  <a class="navbar-brand active" href="{%url 'information'%}">Information Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+        <a class="nav-link " href="{% url 'bookDetails'%}">Upload_Book_Details</a>
+
+      <a class="nav-link " href="#">About Us</a>
+      <a class="nav-link nav-item " href="{%url 'profile'%}"><input type="submit" class="btn btn-primary" value="Profile"></a>
+      <a class="nav-link" href="{%url 'logout'%}"><input type="submit" class="btn btn-primary" value="LogOut"></a>
+    </div>
+  </div>
+</nav>
+
+
+<center>
+<font size="6"
+          face="verdana"
+          color="green">
+            <center>Upload the name of the Subject one by one.</center>
+        </font>
+
+<div class="container">
+            {% if eng is not None%}
+            <form method="POST" action="{% url 'bookDetails' %}">
+            {% csrf_token %}
+            <label for="dept">Degree:</label>
+
+                 <select  id="dept" name="dept" >
+                <optgroup label="B.E">
+                    {%for ob in  eng %}
+                    <option value="{{ob.dept}}">{{ob.dept}}</option>
+                    {% endfor %}
+                </optgroup>
+            </select>
+                <label>Semester</label>
+                <input class="semester" type="text" name="sem" width="5px">  <br><br>
+                <label>Subject Name</label>
+                <textarea placeholder="Subject name" type="text" name="subject1" width="15px"></textarea>
+                <br><br/>
+
+{#                <label>Subject 2</label>#}
+{#                <textarea  placeholder="Subject 1" type="text" name="subject2" width="15px"> </textarea><br>#}
+{##}
+{#                <label>Subject 3</label>#}
+{#                <textarea placeholder="Subject 3"type="text" name="subject3" width="15px"></textarea>#}
+{##}
+{#                <label>Subject 4</label>#}
+{#                <textarea  placeholder="Subject 4"type="text" name="subject4" width="15px"></textarea><br>#}
+{##}
+{#                <label>Subject 5</label>#}
+{#                <textarea placeholder="Subject 5" type="text" name="subject5" width="15px"> </textarea>#}
+{##}
+{#                <label>Subject 6</label>#}
+{#                <textarea placeholder="Subject 6" type="text" name="subject6" width="15px"> </textarea><br>#}
+
+            <hr>
+             <input type="submit" value="upload" > <br>
+
+{##}
+{#             {% if book_name is not None %}#}
+{#                 <b>Book is Available</b> <hr>#}
+{#                   {% for ob in book_name %}#}
+{#                       <table>#}
+{#                           <tr><td>#}
+{#                    <b>   {{ ob}} </b>#}
+{#                       </td></tr>#}
+{#                       </table>#}
+{#                   {% endfor %}#}
+{#               {% endif %}#}
+{#            {{error}}#}
+{##}
+
+        </form>
+                   {%endif%}
+</div>
+</center>
+
+
+
+ <font size="6"
+          face="verdana"
+          color="green">
+            <center>{{success}}</center>
+        </font>
+
+
+
+
+    <font size="6"
+          face="verdana"
+          color="red">
+            <center>{{error2}}</center>
+        </font>
+
+
+
+<br>
+<footer class="text-muted text-center">
+  <div class="hello">
+    &copy: Krishna singh, {% now "Y"%}
+  </div>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

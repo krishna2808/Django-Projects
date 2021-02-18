@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        .hello{
+            background-color: burlywood;
+        }
+    </style>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body class="hello">
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{%url 'home'%}">Home</a>
+  <a class="navbar-brand" href="{%url 'information'%}">Information Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-link " href="#">About Us</a>
+      <a class="nav-link nav-item active" href="{%url 'login'%}"> <input type="submit" class="btn btn-primary" value="LogIn"></a>
+      <a class="nav-link active" href="{%url 'signup'%}"> <input type="submit" class="btn btn-primary" value="SignUp"></a>
+    </div>
+  </div>
+</nav>
+
+    <font size="6"
+          face="verdana"
+          color="red">
+            <center>{{error}}</center>
+        </font>
+
+    {% load static %}
+
+
+<center>
+    <img src="{% static 'accounts/Book.png' %}" height="200px" width="200px" >
+</center>
+
+<b>Introduction</b> <br>
+<p>
+            This project is like an e- bookstore website where books can be bought from the comfort of home through the Internet.   An online bookstore is a virtual store on the Internet where customers can browse the catalog and select books of interest. User can select many books and those books stored in cart. At checkout time, the items in the shopping cart will be presented as an order. At that time, more information will be needed to complete the transaction. Usually, the customer will be asked to fill the basic details or select a billing address, a shipping address, a shipping option, and payment information such as credit card number.
+</p>
+
+
+<br>
+<footer class="text-muted text-center">
+  <div class="container">
+    &copy: Prassan, {% now "Y"%}
+  </div>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

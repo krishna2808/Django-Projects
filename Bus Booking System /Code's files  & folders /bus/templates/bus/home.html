@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body bgcolor="#7fffd4">
+
+
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{%url 'home'%}">Home</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-link " href="#">About</a>
+      <a class="nav-link nav-item" href="{%url 'signup'%}"><input type="submit" class="btn btn-primary" value="SignUp"> </a>
+      <a class="nav-link nav-item" href="{%url 'signin'%}"><input type="submit" class="btn btn-primary" value="SignIn"> </a>
+      <a class="nav-link" href="{% url 'blog'%}">Blog</a>
+    </div>
+  </div>
+</nav>
+
+<center  class="krishna">
+<div class="select2-container">
+
+<img src="{% static 'accounts/index.jpeg' %}">
+
+
+</div>
+</center>
+           <p>
+
+               An Online Bus Booking Software increases reservations by offering a better performance, useful value additions and a less complex booking process. This software also provides on-board bookings and allows commissionable bookings with the help of travel agency system.
+
+Many Bus Companies hold multiple distribution channels along with multi-divisional and branding strategies. They want a system that provides them with web-based interfaces for their end customers, B2B agents and employee managed reservations with an XML gateway for distributing their inventory to OTAs and aggregators.
+
+A web-based bus reservation system provides a customers and B2B agents an easy-to-use interface for online booking and check-in, allowing them to select the date of travel, pick ticket/route options, select their preferred seat(s) and finally make online payment.
+
+
+
+               Travel Technology Solution provides the plateform of online "BUS BOOKING". From here, every users can be book online bus of  your best routes. So, customer feel free to book with us.
+
+Customer have a option to find your best routes as per your require city. And after the searching, there is also a option of filtering by the fare and directy redirecte to the payment gateway page. customer can easily make a payment and generate the ticket as well.
+           </p>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

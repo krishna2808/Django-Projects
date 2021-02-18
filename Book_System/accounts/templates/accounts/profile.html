@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+
+       <style>
+
+
+      *, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+form {
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+  background: rgba(255,255,255,0.1);
+  border: none;
+  font-size: 16px;
+  height: auto;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: #4bc970;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid #3ac162;
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 100%;
+}
+
+@media screen and (min-width: 480px) {
+
+  form {
+    max-width: 480px;
+  }
+
+}
+
+      .hello{
+            background-color: burlywood;
+        }
+       </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<body class="hello">
+
+
+
+
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand " href="{%url 'home'%}">Home</a>
+  <a class="navbar-brand " href="{%url 'information'%}">Information Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-link " href="#">About Us</a>
+      <a class="nav-link nav-item " href="{%url 'login'%}"><input type="submit" class="btn btn-primary" value="LogIn"></a>
+      <a class="nav-link active" href="{% url 'logout'%}"><input type="submit" class="btn btn-primary" value="LogOut"></a>
+    </div>
+  </div>
+</nav>
+
+
+<!--<form action="{%url 'profile'%}" method="POST">-->
+<h1>Profile</h1>
+<center><h3>Welcome to your Profile {{userObject.username}}</h3></center>
+<br><br>
+<!--<div class="container">-->
+<!--    <label>Username   : </label><input type="text" name="username" value="{{userObject.username}}"><br><br/>-->
+<!--    <label>First Name : </label><input type="text" name="firstname" value="{{userObject.first_name}}"><br>-->
+<!--    <label>Last name  : </label><input type="text" name="lastname" value="{{userObject.last_name}}"><br>-->
+<!--    <label>Email      : </label><input type="text" name="email" value="{{userObject.email}}"><br>-->
+<form method="POST" action="profile">
+{% if userObject is not  None%}
+
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <label >Username:</label>
+          <input type="text"  name="username" value="{{userObject.username}}">
+
+          <label >First name:</label>
+          <input type="text" name="firstname" value="{{userObject.first_name}}">
+
+          <label >Last name:</label>
+          <input type="text"  name="lastname" value="{{userObject.last_name}}">
+
+          <label >Email:</label>
+          <input type="email"  name="email" value="{{userObject.email}}">
+
+<!--          <label for="password">Password:</label>-->
+<!--          <input type="password" id="password" name="user_password">-->
+
+<!--          <label>Age:</label>-->
+<!--          <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 13</label><br>-->
+<!--          <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">13 or older</label>-->
+<!--        </fieldset>-->
+
+<!--        <fieldset>-->
+<!--          <legend><span class="number">2</span>Your profile</legend>-->
+<!--          <label for="bio">Biography:</label>-->
+<!--          <textarea id="bio" name="user_bio"></textarea>-->
+<!--        </fieldset>-->
+<!--        <fieldset>-->
+<!--        <label for="job">Job Role:</label>-->
+<!--        <select id="job" name="user_job">-->
+<!--          <optgroup label="Web">-->
+<!--            <option value="frontend_developer">Front-End Developer</option>-->
+<!--            <option value="php_developor">PHP Developer</option>-->
+<!--            <option value="python_developer">Python Developer</option>-->
+<!--            <option value="rails_developer"> Rails Developer</option>-->
+<!--            <option value="web_designer">Web Designer</option>-->
+<!--            <option value="WordPress_developer">WordPress Developer</option>-->
+<!--          </optgroup>-->
+<!--          <optgroup label="Mobile">-->
+<!--            <option value="Android_developer">Androild Developer</option>-->
+<!--            <option value="iOS_developer">iOS Developer</option>-->
+<!--            <option value="mobile_designer">Mobile Designer</option>-->
+<!--          </optgroup>-->
+<!--          <optgroup label="Business">-->
+<!--            <option value="business_owner">Business Owner</option>-->
+<!--            <option value="freelancer">Freelancer</option>-->
+<!--          </optgroup>-->
+<!--          <optgroup label="Other">-->
+<!--            <option value="secretary">Secretary</option>-->
+<!--            <option value="maintenance">Maintenance</option>-->
+<!--          </optgroup>-->
+<!--        </select>-->
+
+        </fieldset>
+{#        <button type="submit">Edit</button>#}
+
+
+
+<!--</div>-->
+{% endif %}
+{#    {%if useObject !=  None%}#}
+{#    {{userObject.username}}#}
+{#    {{userObject.first_name}}#}
+{#    {{userObject.last_name}}#}
+{#    {{userObject.email}}#}
+{#    {{userObject.password}}#}
+{##}
+{#  {%endif%}#}
+<!--<a href="{% url 'profile'%}">profile<input type="submit"></a>-->
+</form>
+
+
+<br>
+<footer class="text-muted text-center">
+  <div class="container">
+    &copy: Almash, {% now "Y"%}
+  </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>

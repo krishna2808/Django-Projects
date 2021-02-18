@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books taken </title>
+
+
+      <style>
+    Body {
+      font-family: Calibri, Helvetica, sans-serif;
+      background-color: pink;
+    }
+    button {
+           background-color: black;
+           width: 5%;
+            color: orange;
+            padding: 15px;
+            margin: 10px 0px;
+            border: none;
+            cursor: pointer;
+             }
+     form {
+            border: 3px solid #f1f1f1;
+        }
+     input[type=text]{
+            width:5%;
+            margin: 8px 0;
+            padding: 12px 20px;
+            display: inline-block;
+            border: 2px solid green;
+            box-sizing: border-box;
+        }
+     {#button:hover {#}
+     {#       opacity: 0.2;#}
+     {#   }#}
+     {# .cancelbtn {#}
+     {#       width: auto;#}
+     {#       padding: 10px 18px;#}
+     {#       margin: 10px 5px;#}
+     {#   }#}
+
+
+     .container {
+            padding: 15px;
+            background-color: lightblue;
+        }
+
+     .container1 {
+            background-color: burlywood;
+        }
+     .details {
+            padding: 10px;
+            background-color: lightgreen;
+        }
+
+.hello{
+            background-color: burlywood;
+        }
+
+
+</style>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+
+
+<body class="hello">
+
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="{%url 'home'%}">Home</a>
+  <a class="navbar-brand active" href="{%url 'information'%}">Information Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+        <a class="nav-link " href="{% url 'bookDetails'%}">Upload_Book_Details</a>
+
+      <a class="nav-link " href="#">About Us</a>
+      <a class="nav-link nav-item " href="{%url 'login'%}"><input type="submit" class="btn btn-primary" value="LogIn"></a>
+      <a class="nav-link" href="{%url 'signup'%}"><input type="submit" class="btn btn-primary" value="SignUp"></a>
+    </div>
+  </div>
+</nav>
+
+<!--           <center><b>Conditions</b></center><br><br/>-->
+<!--           <p><b>(1)</b>  if you don't have any semester books available then you will have to pay 50% for the total books</p><br>-->
+<!--           <p><b>(2)</b> if you have a full book for any semester, you will be given a books free of cost.</p><br>-->
+<!--{#           <p><b>()</b><p><br><br/>#}-->
+<!--{#           <p><b>()</b><p><br><br/>#}-->
+<!--{#           <p><b>()</b><p><br><br/>#}-->
+<!--           <center><a href="https://www.google.com/maps/place/Government+Engineering+College,+Modasa/@23.4934373,73.3003306,15z/data=!4m5!3m4!1s0x0:0xf669f2347bbb06cf!8m2!3d23.4934373!4d73.3003306"><input type="submit" class="btn btn-primary" value="Location of books"></a><br><br/>-->
+<!--          <a href="{% url 'information' %}"><input type="submit" class="btn btn-primary" value="Back"></a></center>-->
+
+
+<!--<br>-->
+
+
+<b>
+           <center>
+               <table>
+<!--                   <tr><td><h3>Books </h3></td><td><h3>   Price</h3></td></tr>-->
+
+                       <tr><td>Basic Mechanical Engineering </td>   <td>60</td></tr>
+                   <tr><td>Basic Electrical Engineering </td><td>70</td></tr>
+                   <tr><td>Engineering Graphics (Egd) </td> <td>100</td></tr>
+                   <tr><td>English <td>54</td></td></tr>
+                   <tr><td>Physics</td><td>76</td></tr><br></br>
+
+                   <tr><td><h3>Seller Name   : Almash</h3></td></tr>
+                   <tr><td><h3>Mobile Number : 998745632</h3></td></tr>
+                   <tr><td><h3>EmailId : almash@gmail.com</h3></td></tr>
+
+
+               </table>
+
+
+           </center>
+
+</b>
+
+
+<footer class="text-muted text-center">
+  <div class="container1">
+    &copy: Almash, {% now "Y"%}
+  </div>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
+

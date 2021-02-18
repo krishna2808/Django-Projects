@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html>
+<style>
+    /*add full-width input fields*/
+
+    input[type=text],
+    input[type=password] {
+        width: 100%;
+        padding: 5px 5px;
+        margin: 2px 0;
+        display: inline-block;
+        border: 2px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* set a style for all buttons*/
+
+    button {
+        background-color: Green;
+        color: white;
+        padding: 15px 20px;
+        margin: 8px 0;
+        cursor: pointer;
+        width: 50%;
+    }
+    /*set styles for the cancel button*/
+
+    .cancelbtn {
+        padding: 15px 20px;
+        background-color: #FF2E00;
+    }
+    /*float cancel and signup buttons and add an equal width*/
+
+    Body {
+      font-family: Calibri, Helvetica, sans-serif;
+      background-color: pink;
+    }
+
+    /*.cancelbtn,*/
+    .signupbtn {
+        float: left;
+        width: 50%;
+    }
+    /*add padding to container elements*/
+
+    .container {
+        padding: 10px;
+    }
+    /*clear floats*/
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    /*styles for cancel button and signup button
+      on extra small screens*/
+
+    @media screen and (max-width: 300px) {
+        .cancelbtn,
+        .signupbtn {
+            width: 50%;
+        }
+    }
+    .hello{
+            background-color: burlywood;
+        }
+</style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+
+<body class="hello">
+
+           <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand " href="{%url 'home'%}">Home</a>
+  <a class="navbar-brand " href="{%url 'information'%}">Information Book</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav ml-auto">
+      <a class="nav-link " href="#">About Us</a>
+      <a class="nav-link nav-item " href="{%url 'login'%}"><input type="submit" class="btn btn-primary" value="LogIn"></a>
+      <a class="nav-link active" href="{% url 'signup'%}"><input type="submit" class="btn btn-primary" value="SignUp"></a>
+    </div>
+  </div>
+</nav>
+<center><h2>Signup Form</h2></center>
+    <!--Step 1:Adding HTML-->
+     <font size="6"
+          face="verdana"
+          color="red">
+            <center>{{error}}</center>
+        </font>
+
+    <form action="{% url 'signup'%}" method="POST" style="border:1px solid #ccc">
+        {% csrf_token %}
+        <div class="container">
+            <label><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label><b>First name</b></label>
+            <input type="text" placeholder="Enter First name" name="firstname" required>
+
+            <label><b>Last name</b></label>
+            <input type="text" placeholder="Enter Last name" name="lastname" required>
+
+
+            <label><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+<!--            <label><b>Mobile No</b></label>-->
+<!--            <input type="text" placeholder="Enter Mobile No" name="mobileno" required>-->
+
+
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="pass" required>
+
+            <label><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="repass" required>
+<!--            <input type="checkbox" checked="checked"> Remember me-->
+<!--            <p>To create an account you have to agree our <a href="#">Terms & Privacy</a>.</p>-->
+            <br><br>
+            <div class="clearfix">
+                <a href="{%url 'home'%}"><button type="button" class="cancelbtn">Cancel</button></a>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    </form>
+
+
+
+<br>
+<footer class="text-muted text-center">
+  <div class="container">
+    &copy: Krishna singh, {% now "Y"%}
+  </div>
+</footer>
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
