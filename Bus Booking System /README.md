@@ -1,1 +1,15 @@
-#  Bus Booking System 🚌  🚎   🚍
+#  Bus Booking System 🚌    🚍
+## (1)
+![](https://github.com/Krishna2808/Django-Projects/blob/main/Bus%20Booking%20System%20/Code's%20%20output/b1.PNG)
+## (2)
+![](https://github.com/Krishna2808/Django-Projects/blob/main/Bus%20Booking%20System%20/Code's%20%20output/b2.PNG)
+## (3)
+![](https://github.com/Krishna2808/Django-Projects/blob/main/Bus%20Booking%20System%20/Code's%20%20output/b3.PNG)
+## (4)
+![](https://github.com/Krishna2808/Django-Projects/blob/main/Bus%20Booking%20System%20/Code's%20%20output/b4.PNG)
+## (5)
+![](https://github.com/Krishna2808/Django-Projects/blob/main/Bus%20Booking%20System%20/Code's%20%20output/b5.PNG)
+## (6)
+![](https://github.com/Krishna2808/Django-Projects/blob/main/Bus%20Booking%20System%20/Code's%20%20output/b6.PNG)
+## (7)
+![](https://github.com/Krishna2808/Django-Projects/blob/main/Bus%20Booking%20System%20/Code's%20%20output/b7.PNG)
