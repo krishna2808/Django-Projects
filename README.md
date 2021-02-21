@@ -9,28 +9,26 @@
        ------------------------------server started--------------------------------                                        
 ![](https://github.com/Krishna2808/Django-Projects/blob/main/Book_System/accounts/static/accounts/serverside.png)
 
-                                              |
-                                              |
+
        ------------------------------- Adminster- login------------------------------
 ![](https://github.com/Krishna2808/Django-Projects/blob/main/Book_System/accounts/static/accounts/administer.png)
 
-                                              |
-                                              |
+                                             
+                                             
        ---------------------------------Administer- mode-----------------------------
 ![](https://github.com/Krishna2808/Django-Projects/blob/main/Book_System/accounts/static/accounts/adminster1.png)
 
-                                              |
-                                              |
+                                             
+                                             
       -----------------------------------Total-users---------------------------------
 ![](https://github.com/Krishna2808/Django-Projects/blob/main/Book_System/accounts/static/accounts/users.png)
 
-                                              |
-                                              |
+                                           
+                                           
      ----------------------------------- Total- books ----------------------------------
 ![](https://github.com/Krishna2808/Django-Projects/blob/main/Book_System/accounts/static/accounts/addBooks.png)
 
-                                              |
-                                              |
+                                              
     ----------------------------------- Department of B.E -------------------------------
 ![](https://github.com/Krishna2808/Django-Projects/blob/main/Book_System/accounts/static/accounts/dipartment.png)
 
